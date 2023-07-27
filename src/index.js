@@ -1,23 +1,37 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-// function Greeting() {
+// // harus return 1 element parent, jadi kalau banyak bisa pake React.Fragment
+// const Greeting = () => {
 //   return (
-//     <div>
-//       <h2>My First Component</h2>
-//     </div>
+//     <React.Fragment>
+//       <div>
+//         <h3>Hello people</h3>
+//         <ul>
+//           <li>
+//             <a href="#"> Hello World</a>
+//           </li>
+//         </ul>
+//       </div>
+//       <h2>Hello World</h2>
+//     </React.Fragment>
 //   )
 // }
 
-// function Greeting() {
-//   return React.createElement('h2', {}, 'hellow world')
-// }
-
+// yg lebih singkat pake <>
 const Greeting = () => {
-  return React.createElement(
-    'div',
-    {},
-    React.createElement('h2', {}, 'hello world')
+  return (
+    <>
+      <div>
+        <h3>Hello people</h3>
+        <ul>
+          <li>
+            <a href="#"> Hello World</a>
+          </li>
+        </ul>
+      </div>
+      <h2>Hello World</h2>
+    </>
   )
 }
 
