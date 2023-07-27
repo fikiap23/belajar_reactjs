@@ -19,20 +19,43 @@ import ReactDOM from 'react-dom/client'
 // }
 
 // yg lebih singkat pake <>
+// const Greeting = () => {
+//   return (
+//     <>
+//       <div>
+//         <h3>Hello people</h3>
+//         <ul>
+//           <li>
+//             <a href="#"> Hello World</a>
+//           </li>
+//         </ul>
+//       </div>
+//       <h2>Hello World</h2>
+//     </>
+//   )
+// }
+
+// const Greeting = () => {
+//   return (
+//     <div>
+//       <h2>john doe</h2>
+//       <p>this is my message</p>
+//     </div>
+//   )
+// }
+
 const Greeting = () => {
   return (
-    <>
-      <div>
-        <h3>Hello people</h3>
-        <ul>
-          <li>
-            <a href="#"> Hello World</a>
-          </li>
-        </ul>
-      </div>
-      <h2>Hello World</h2>
-    </>
+    <div>
+      <Person />
+      <Message />
+    </div>
   )
+}
+
+const Person = () => <h2>john doe</h2>
+const Message = () => {
+  return <p>this is my message</p>
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
