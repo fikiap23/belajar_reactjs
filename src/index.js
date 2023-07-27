@@ -1,63 +1,38 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-// // harus return 1 element parent, jadi kalau banyak bisa pake React.Fragment
-// const Greeting = () => {
-//   return (
-//     <React.Fragment>
-//       <div>
-//         <h3>Hello people</h3>
-//         <ul>
-//           <li>
-//             <a href="#"> Hello World</a>
-//           </li>
-//         </ul>
-//       </div>
-//       <h2>Hello World</h2>
-//     </React.Fragment>
-//   )
-// }
-
-// yg lebih singkat pake <>
-// const Greeting = () => {
-//   return (
-//     <>
-//       <div>
-//         <h3>Hello people</h3>
-//         <ul>
-//           <li>
-//             <a href="#"> Hello World</a>
-//           </li>
-//         </ul>
-//       </div>
-//       <h2>Hello World</h2>
-//     </>
-//   )
-// }
-
-// const Greeting = () => {
-//   return (
-//     <div>
-//       <h2>john doe</h2>
-//       <p>this is my message</p>
-//     </div>
-//   )
-// }
-
-const Greeting = () => {
+function BookList() {
   return (
-    <div>
-      <Person />
-      <Message />
-    </div>
+    <section>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
   )
 }
 
-const Person = () => <h2>john doe</h2>
-const Message = () => {
-  return <p>this is my message</p>
+const Book = () => {
+  return (
+    <article className="book">
+      <Image />
+      <Title />
+      <Author />
+    </article>
+  )
 }
+
+const Image = () => (
+  <img
+    src="https://images-na.ssl-images-amazon.com/images/I/71m+Qtq+HrL._AC_UL900_SR900,600_.jpg"
+    alt="Interesting Facts For Curious Minds"
+  />
+)
+const Title = () => {
+  return <h2>Interesting Facts For Curious Minds</h2>
+}
+const Author = () => <h4>Jordan Moore </h4>
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
-root.render(<Greeting />)
+root.render(<BookList />)
